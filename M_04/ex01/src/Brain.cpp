@@ -3,11 +3,17 @@
 Brain::Brain()
 {
 	std::cout << "Default Brain Constructor called" << std::endl;
+	int i = -1;
+	while (++i < 100)
+		this->ideas[i] = " ";
 }
 
 Brain::Brain(const Brain & cpy)
 {
 	std::cout << "Default Brain Copy called" << std::endl;
+	int i = -1;
+	while (++i < 100)
+		this->ideas[i] = cpy.ideas[i];
 	*this = cpy;
 }
 

@@ -10,6 +10,7 @@ Dog::Dog()
 Dog::Dog(const Dog & cpy) : Animal()
 {
 	std::cout << "Dog default copy called" << std::endl;
+	this->dogBrain = new Brain();
 	*this = cpy;
 }
 
@@ -17,6 +18,7 @@ Dog & Dog::operator=(const Dog &ope)
 {
 	std::cout << "Dog default operator called" << std::endl;
 	this->type = ope.getType();
+	*(this->dogBrain) = *(ope.dogBrain);
 	return *this;
 }
 

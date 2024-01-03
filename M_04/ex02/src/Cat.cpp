@@ -10,6 +10,7 @@ Cat::Cat()
 Cat::Cat(const Cat & cpy) : Animal()
 {
 	std::cout << "Cat default copy called" << std::endl;
+	this->catBrain = new Brain();
 	*this = cpy;
 }
 
@@ -17,6 +18,7 @@ Cat & Cat::operator=(const Cat &ope)
 {
 	std::cout << "Cat default operator called" << std::endl;
 	this->type = ope.getType();
+	*(this->catBrain) = *(ope.catBrain);
 	return *this;
 }
 
@@ -25,8 +27,8 @@ Cat::~Cat()
 	delete catBrain;
 	std::cout << "Cat default destructor called" << std::endl;
 }
-
 void	Cat::makeSound(void) const
 {
 	std::cout << "Cat is Meowing" << std::endl;
 }
+
