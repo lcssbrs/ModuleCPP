@@ -7,11 +7,11 @@ class Cat: public Animal
 {
 	public:
 		Cat();
-		Cat(Cat &cpy);
-		Cat & operator=(Cat & ope);
+		Cat(const Cat &cpy);
+		Cat & operator=(const Cat & ope);
 		~Cat();
 
-		virtual void makeSound(void);
+		void makeSound(void) const;
 };
 
 #endif
