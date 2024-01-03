@@ -8,7 +8,8 @@ int main()
     const Animal* i = new Cat();
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
-    i->makeSound(); //will output the cat sound! j->makeSound();
+    i->makeSound();
+    j->makeSound();
     meta->makeSound();
     delete meta;
     delete j;
@@ -17,7 +18,7 @@ int main()
     const WrongAnimal* meta_test = new WrongAnimal();
     const WrongAnimal* i_test = new WrongCat();
     std::cout << i_test->getType() << " " << std::endl;
-    i_test->makeSound(); //will output the cat sound! j->makeSound();
+    i_test->makeSound();
     meta_test->makeSound();
     delete meta_test;
     delete i_test;
