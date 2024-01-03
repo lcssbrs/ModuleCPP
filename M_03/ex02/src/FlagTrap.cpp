@@ -16,7 +16,7 @@ FlagTrap::FlagTrap(std::string newName)
 	this->attack_damage = 30;
 	this->hitPoint = 100;
 }
-FlagTrap::FlagTrap(FlagTrap &newClap)
+FlagTrap::FlagTrap(FlagTrap &newClap) : ClapTrap()
 {
 	*this = newClap;
 }

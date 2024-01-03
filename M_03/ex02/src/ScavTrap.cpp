@@ -16,7 +16,7 @@ ScavTrap::ScavTrap(std::string newName)
 	this->attack_damage = 20;
 	this->hitPoint = 100;
 }
-ScavTrap::ScavTrap(ScavTrap &newClap)
+ScavTrap::ScavTrap(ScavTrap &newClap) : ClapTrap()
 {
 	*this = newClap;
 }
