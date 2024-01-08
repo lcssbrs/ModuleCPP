@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 16:37:18 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/06 17:44:08 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/08 09:33:28 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ std::ostream	&operator<<( std::ostream &o, const Bureaucrat &curr )
 }
 
 
-void Bureaucrat::signForm(const Form &curr)
+void Bureaucrat::signForm(const AForm &curr)
 {
 	if (curr.getIsSigned() == true)
 	{

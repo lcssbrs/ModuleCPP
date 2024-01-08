@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+         #
+#    By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/06 16:37:12 by lseiberr          #+#    #+#              #
-#    Updated: 2024/01/06 17:49:58 by lseiberr         ###   ########.fr        #
+#    Updated: 2024/01/08 12:00:00 by lseiberr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME	= Bureaucrat
 CC		= g++
 CFLAGS	= -Werror -Wextra -Wall -std=c++98 -Wshadow -Wno-shadow
 
-SRC		= src/Bureaucrat.cpp src/main.cpp src/Form.cpp
+SRC		= src/Bureaucrat.cpp src/main.cpp src/Form.cpp src/PresidentialPardonForm.cpp src/ShrubberyCreationForm.cpp src/RobotomyRequestForm.cpp
 OBJ		= $(SRC:.cpp=.o)
 
 

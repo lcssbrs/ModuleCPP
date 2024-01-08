@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 14:47:19 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/06 17:40:53 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/08 09:33:17 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <exception>
 # include "Form.hpp"
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -54,8 +54,8 @@ class Bureaucrat
 		void	decrementGrade(void);
 
 	//form function
-		void		signForm(const Form &curr);
-		
+		void		signForm(const AForm &curr);
+
 	private:
 		std::string name;
 		int grade;

@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
+/*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/06 21:48:35 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/08 12:01:07 by lseiberr         ###   ########.fr       */
+/*   Created: 2024/01/08 08:57:16 by lseiberr          #+#    #+#             */
+/*   Updated: 2024/01/08 11:55:39 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ShrubberyCreationForm.hpp"
+#include "../includes/RobotomyRequestForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string newTarget) : AForm("default", 145, 137)
+RobotomyRequestForm::RobotomyRequestForm(std::string newTarget) : AForm("default", 72, 45)
 {
-	std::cout << "constructor shrubbery called\n";
+	std::cout << "constructor robot called\n";
 	this->target = newTarget;
 }
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm & cpy) : AForm("default", 145, 137)
+
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm & cpy) : AForm("default", 72, 45)
 {
 	*this = cpy;
 }
 
-ShrubberyCreationForm & ShrubberyCreationForm::operator=(const ShrubberyCreationForm & ope)
+RobotomyRequestForm & RobotomyRequestForm::operator=(const RobotomyRequestForm &ope)
 {
 	*this = ope;
 	return *this;
 }
 
-ShrubberyCreationForm::~ShrubberyCreationForm()
+RobotomyRequestForm::~RobotomyRequestForm()
 {
-	std::cout << "constructor shrubbery called\n";
+	std::cout << "destructor robot called\n";
 }
+

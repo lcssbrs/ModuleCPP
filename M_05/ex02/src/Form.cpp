@@ -3,58 +3,58 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 16:36:59 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/06 18:00:03 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/08 11:56:13 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Form.hpp"
 
-Form::Form() : isSigned(150), isExecuted(1)
+AForm::AForm(std::string newName, int newSigned, int newExec) : name(newName), isSigned(newSigned), isExecuted(newExec)
 {
-	(std::string)this->name = "default";
+	std::cout << "constructor form called\n";
 	this->signature = false;
 }
 
-Form::Form(const Form &cpy) : name("default"), signature(false), isSigned(150), isExecuted(1)
+AForm::AForm(const AForm &cpy) : name("default"), isSigned(145), isExecuted(137)
 {
 	*this = cpy;
 }
 
-Form & Form::operator=(const Form & ope)
+AForm & AForm::operator=(const AForm & ope)
 {
 	(std::string)this->name = ope.getName();
 	return *this;
 }
 
-Form::~Form()
+AForm::~AForm()
 {
-
+	std::cout << "destructor form called\n";
 }
 
-std::string Form::getName(void)const
+std::string AForm::getName(void)const
 {
 	return this->name;
 }
 
-int Form::getSignature(void)const
+int AForm::getSignature(void)const
 {
 	return (this->signature);
 }
 
-int Form::getIsSigned(void)const
+int AForm::getIsSigned(void)const
 {
 	return (this->isSigned);
 }
 
-int Form::getIsExecuted(void)const
+int AForm::getIsExecuted(void)const
 {
 	return (this->isExecuted);
 }
 
-std::ostream &operator<<(std::ostream &o, const Form &curr)
+std::ostream &operator<<(std::ostream &o, const AForm &curr)
 {
 	o << "name is:" << curr.getName() <<std::endl;
 	o << "isSigned is" << curr.getIsSigned() << std::endl;
@@ -66,20 +66,20 @@ std::ostream &operator<<(std::ostream &o, const Form &curr)
 	return o;
 }
 
-const char *Form::GradeTooHighException::what() const throw()
+const char *AForm::GradeTooHighException::what() const throw()
 {
 	return "Grade too high";
 }
 
-const char *Form::GradeTooLowException::what() const throw()
+const char *AForm::GradeTooLowException::what() const throw()
 {
 	return "Grade too low";
 }
 
-void	Form::beSigned(const Bureaucrat &curr)
+void	AForm::beSigned(const Bureaucrat &curr)
 {
 	if (curr.getGrade() > 150)
-		throw Form::GradeTooLowException();
+		throw AForm::GradeTooLowException();
 	else
 		this->signature = true;
 }

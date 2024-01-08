@@ -3,18 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 16:37:09 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/06 16:37:09 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/08 11:58:39 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Bureaucrat.hpp"
+#include "../includes/RobotomyRequestForm.hpp"
+#include "../includes/PresidentialPardonForm.hpp"
+#include "../includes/ShrubberyCreationForm.hpp"
+
 
 int main (void)
 {
 	Bureaucrat boss("boss", 150);
+	RobotomyRequestForm Robot("default");
+	PresidentialPardonForm pres("pres");
+	ShrubberyCreationForm shrub("shrub");
 	std::cout << boss;
 	try
 	{
@@ -35,4 +42,6 @@ int main (void)
 		std::cout << "toujours pas bien\n";
 	}
 	std::cout << boss2;
+	std::cout << Robot.getName() << std::endl;
+	std::cout << Robot.getIsSigned() <<std::endl;
 }
