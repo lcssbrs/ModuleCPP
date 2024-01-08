@@ -6,7 +6,7 @@
 /*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 10:54:01 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/08 12:00:19 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/08 15:26:24 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,20 @@ PresidentialPardonForm & PresidentialPardonForm::operator=(const PresidentialPar
 PresidentialPardonForm::~PresidentialPardonForm()
 {
 	std::cout << "destructor president called\n";
+}
+
+void PresidentialPardonForm::execute(Bureaucrat const & executor) const
+{
+	if (executor.getGrade() <= this->getIsExecuted() || executor.getGrade() < 5)
+		throw AForm::GradeTooLowException();
+	else if (this->getSignature() == false)
+		throw AForm::GradeIsSignException();
+	else
+	{
+		if (executor.getGrade() >= 5 && executor.getGrade() < 45)
+			std::cout << this->target << " has beem pardoned bu Zaphod Beeblerox\n";
+
+		else
+			throw AForm::GradeTooLowException();
+	}
 }

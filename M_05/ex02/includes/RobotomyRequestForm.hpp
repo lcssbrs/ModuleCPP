@@ -6,7 +6,7 @@
 /*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 08:53:57 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/08 11:03:48 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/08 15:30:23 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class RobotomyRequestForm : public AForm
 		RobotomyRequestForm(const RobotomyRequestForm & cpy);
 		RobotomyRequestForm & operator=(const RobotomyRequestForm & ope);
 		~RobotomyRequestForm();
-
+		void execute(Bureaucrat const & executor) const;
 	private:
 		std::string target;
 	protected:

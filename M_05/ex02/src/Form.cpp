@@ -6,7 +6,7 @@
 /*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 16:36:59 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/08 11:56:13 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/08 15:30:09 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,10 +76,22 @@ const char *AForm::GradeTooLowException::what() const throw()
 	return "Grade too low";
 }
 
+const char *AForm::GradeIsSignException::what() const throw()
+{
+	return "Grade is not sign";
+}
+
 void	AForm::beSigned(const Bureaucrat &curr)
 {
-	if (curr.getGrade() > 150)
+	if (curr.getGrade() > this->isSigned)
 		throw AForm::GradeTooLowException();
 	else
 		this->signature = true;
 }
+
+/*
+void AForm::execute(Bureaucrat const & executor) const
+{
+	(void)executor;
+}
+*/

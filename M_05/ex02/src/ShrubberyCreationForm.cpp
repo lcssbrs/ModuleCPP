@@ -6,11 +6,14 @@
 /*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:48:35 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/08 12:01:07 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/08 15:35:14 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ShrubberyCreationForm.hpp"
+#include <string>
+#include <fstream>
+#include <iostream>
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string newTarget) : AForm("default", 145, 137)
 {
@@ -31,4 +34,30 @@ ShrubberyCreationForm & ShrubberyCreationForm::operator=(const ShrubberyCreation
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
 	std::cout << "constructor shrubbery called\n";
+}
+
+void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
+{
+	if (executor.getGrade() <= this->getIsExecuted() || executor.getGrade() < 5)
+		throw AForm::GradeTooLowException();
+	else if (this->getSignature() == false)
+		throw AForm::GradeIsSignException();
+	else
+	{
+		if (executor.getGrade() >= 137 && executor.getGrade() <= 150)
+		{
+			std::string file = this->target + "_shrubbery";
+			const char *filetarget = file.c_str();
+			std::ofstream file2(filetarget);
+			if (!file2.is_open())
+				std::cerr << "error\n";
+			file2 <<"         |\n";
+			file2 <<"        | |\n";
+			file2 <<"      | | | |\n";
+			file2 <<"    | || | || |\n";
+			file2.close();
+		}
+		else
+			throw AForm::GradeTooLowException();
+	}
 }

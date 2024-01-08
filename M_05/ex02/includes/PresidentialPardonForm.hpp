@@ -6,7 +6,7 @@
 /*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 10:43:59 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/08 11:59:27 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/08 15:25:41 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class PresidentialPardonForm : public AForm
 		PresidentialPardonForm(const PresidentialPardonForm &cpy);
 		PresidentialPardonForm & operator=(const PresidentialPardonForm & ope);
 		~PresidentialPardonForm();
+		void execute(Bureaucrat const & executor) const;
 	private:
 		std::string target;
 	protected:

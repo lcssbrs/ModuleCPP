@@ -6,7 +6,7 @@
 #    By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/06 16:37:12 by lseiberr          #+#    #+#              #
-#    Updated: 2024/01/08 12:00:00 by lseiberr         ###   ########.fr        #
+#    Updated: 2024/01/08 14:31:12 by lseiberr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ $(NAME): $(OBJ)
 
 clean:
 	rm -f src/*.o
+	rm -f *_shrubbery
 
 fclean: clean
 	rm -f $(NAME)
