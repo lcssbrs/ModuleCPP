@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 16:36:59 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/06 17:38:47 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/08 10:03:25 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Form.hpp"
 
-Form::Form() : isSigned(150), isExecuted(1)
+Form::Form() :  name("default"), isSigned(150), isExecuted(1)
 {
-	(std::string)this->name = "default";
+	std::cout << "constructor form : " << this->name << std::endl;
 	this->signature = false;
 }
 

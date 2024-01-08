@@ -3,18 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 16:37:09 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/06 16:37:09 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/08 10:03:54 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Bureaucrat.hpp"
+#include "../includes/Form.hpp"
 
 int main (void)
 {
 	Bureaucrat boss("boss", 150);
+	Form form;
 	std::cout << boss;
 	try
 	{
@@ -34,5 +36,4 @@ int main (void)
 	{
 		std::cout << "toujours pas bien\n";
 	}
-	std::cout << boss2;
 }
