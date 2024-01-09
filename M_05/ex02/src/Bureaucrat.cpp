@@ -6,7 +6,7 @@
 /*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 16:37:18 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/08 12:20:13 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/09 09:29:57 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,4 +119,23 @@ void Bureaucrat::signForm(const AForm &curr)
 		return ;
 	}
 	std::cout << this->name << " couldn't sign " << curr.getName() << "because he's not good enough\n";
+}
+
+
+void Bureaucrat::executeForm(AForm const & form)
+{
+	Bureaucrat &ref = *this;
+	try
+	{
+		form.execute(ref);
+	}
+	catch (AForm::GradeTooLowException & e)
+	{
+		std::cout << "grade too low to execute\n";
+	}
+	catch (AForm::GradeIsSignException & e)
+	{
+		std::cout << "grade not sign cannot execute\n";
+	}
+	std::cout << ref.name << " executed " << form.getName() << std::endl;
 }

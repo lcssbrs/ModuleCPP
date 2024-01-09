@@ -6,7 +6,7 @@
 /*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 14:47:19 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/08 14:50:01 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/09 09:24:31 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ class Bureaucrat
 
 	//form function
 		void		signForm(const AForm &curr);
+		void		executeForm(AForm const & form);
 
 	private:
 		std::string name;
