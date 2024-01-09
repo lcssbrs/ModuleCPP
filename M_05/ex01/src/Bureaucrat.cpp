@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 16:37:18 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/06 17:44:08 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/09 10:35:41 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,18 +88,20 @@ int Bureaucrat::getGrade(void)const
 
 void Bureaucrat::incrementGrade(void)
 {
+	int *ptr = &this->grade;
 	if (this->getGrade() - 1 < 1)
 		throw Bureaucrat::GradeTooHighException();
 	else
-		this->grade -= 1;
+		*ptr -= 1;
 }
 
 void Bureaucrat::decrementGrade(void)
 {
+	int *ptr = &this->grade;
 	if (this->getGrade() + 1 > 150)
 		throw Bureaucrat::GradeTooLowException();
 	else
-		this->grade += 1;
+		*ptr = this->grade + 1;
 }
 
 std::ostream	&operator<<( std::ostream &o, const Bureaucrat &curr )

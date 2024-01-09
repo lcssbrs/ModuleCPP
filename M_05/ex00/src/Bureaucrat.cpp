@@ -76,18 +76,20 @@ int Bureaucrat::getGrade(void)const
 
 void Bureaucrat::incrementGrade(void)
 {
+	int *ptr = &this->grade;
 	if (this->getGrade() - 1 < 1)
 		throw Bureaucrat::GradeTooHighException();
 	else
-		this->grade -= 1;
+		*ptr -= 1;
 }
 
 void Bureaucrat::decrementGrade(void)
 {
+	int *ptr = &this->grade;
 	if (this->getGrade() + 1 > 150)
 		throw Bureaucrat::GradeTooLowException();
 	else
-		this->grade += 1;
+		*ptr = this->grade + 1;
 }
 
 std::ostream	&operator<<( std::ostream &o, const Bureaucrat &curr )
