@@ -6,9 +6,12 @@
 /*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 11:32:21 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/10 13:19:14 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/10 13:34:56 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef SCALARCONVERTER_HPP
+#define SCALARCONVERTER_HPP
 
 #include <iostream>
 #include <exception>
@@ -51,3 +54,6 @@ class ScalarConverter
 		ScalarConverter(const ScalarConverter &cpy);
 	protected:
 };
+
+
+#endif
