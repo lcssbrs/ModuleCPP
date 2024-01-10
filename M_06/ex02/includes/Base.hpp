@@ -6,7 +6,7 @@
 /*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:54:53 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/10 20:10:19 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/10 20:13:57 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <exception>
 
 class Base
 {
