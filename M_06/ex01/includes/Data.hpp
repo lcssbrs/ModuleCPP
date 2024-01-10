@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Serializer.hpp                                     :+:      :+:    :+:   */
+/*   Data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 13:34:15 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/10 15:16:16 by lseiberr         ###   ########.fr       */
+/*   Created: 2024/01/10 15:00:30 by lseiberr          #+#    #+#             */
+/*   Updated: 2024/01/10 15:31:31 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SERIALIZER_HPP
-#define SERIALIZER_HPP
+#ifndef DATA_HPP
+#define DATA_HPP
 
 #include <stdint.h>
 #include <iostream>
@@ -21,21 +21,21 @@
 #include <iomanip>
 #include <cassert>
 
-#include "Data.hpp"
+#include "Serializer.hpp"
 
-class Data;
-class Serializer
+class Serializer;
+
+class Data
 {
 	public:
-		Serializer();
-		Serializer(const Serializer & cpy);
-		Serializer & operator=(const Serializer & ope);
-		virtual ~Serializer();
-		uintptr_t serialize(Data* ptr);
-		Data* deserialize(uintptr_t raw);
+		Data();
+		Data(const Data & cpy);
+		Data & operator=(const Data & ope);
+		virtual ~Data();
+		int getTest(void)const;
+
 	private:
-
-
+		const static int test = 74;
 	protected:
 
 };

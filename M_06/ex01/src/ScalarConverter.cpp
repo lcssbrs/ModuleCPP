@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
+/*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 17:41:17 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/10 13:04:51 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/10 15:18:06 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	ScalarConverter::convert_char(const char *str)
 	int newstr = atoi(str);
 	if (!newstr)
 		throw (ScalarConverter::ImpossibleException());
-	if (newstr < 32 && newstr > 126)
+	if (newstr < 32 || newstr > 126)
 		throw (ScalarConverter::CharNotPrintableException());
 	std::cout << static_cast<char>(newstr) <<std::endl;
 }
