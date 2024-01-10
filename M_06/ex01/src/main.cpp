@@ -6,11 +6,10 @@
 /*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 10:52:00 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/10 15:48:58 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/10 15:50:55 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ScalarConverter.hpp"
 #include "../includes/Serializer.hpp"
 #include "../includes/Data.hpp"
 
