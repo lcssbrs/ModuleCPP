@@ -6,7 +6,7 @@
 /*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:54:53 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/10 16:17:54 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/10 20:10:19 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,6 @@ class Base
 {
 	public:
 		virtual ~Base();
-		Base * generate(void);
-		void identify(Base* p);
-		//void identify(Base& p);
 
 	private:
 
@@ -34,20 +31,21 @@ class Base
 
 class BaseA : public Base
 {
-	public:
-		~BaseA();
+
 };
 
 class BaseB : public Base
 {
-	public:
-		~BaseB();
+
 };
 
 class BaseC : public Base
 {
-	public:
-		~BaseC();
+
 };
+
+Base * generate(void);
+void identify(Base* p);
+void identify(Base& p);
 
 #endif

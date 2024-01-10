@@ -6,7 +6,7 @@
 /*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 16:05:12 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/10 16:18:44 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/10 20:11:25 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Base::~Base()
 
 }
 
-Base *Base::generate(void)
+Base *generate(void)
 {
 	srand(time(NULL));
 	int random = rand()%100;
@@ -35,7 +35,7 @@ Base *Base::generate(void)
 	return baseC;
 }
 
-void Base::identify(Base* p)
+void identify(Base* p)
 {
 	if (dynamic_cast<BaseA*>(p))
 	{
@@ -53,4 +53,36 @@ void Base::identify(Base* p)
 		return ;
 	}
 	std::cout << "Not a base class\n";
+}
+
+void    identify( Base& p )
+{
+	try {
+		BaseA& a = dynamic_cast< BaseA& >( p );
+		std::cout << "This is an A" << std::endl;
+		(void)a;
+	}
+	catch(const std::exception& e)
+	{
+
+	}
+	try
+	{
+		BaseB& b = dynamic_cast< BaseB& >( p );
+		std::cout << "This is an B" << std::endl;
+		(void)b;
+	} catch( const std::exception& e )
+	{
+
+	}
+	try
+	{
+		BaseC& c = dynamic_cast< BaseC& >( p );
+		std::cout << "This is an C" << std::endl;
+		(void)c;
+	}
+	catch( const std::exception& e )
+	{
+
+	}
 }
