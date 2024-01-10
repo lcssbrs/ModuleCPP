@@ -6,16 +6,16 @@
 #    By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/06 16:37:12 by lseiberr          #+#    #+#              #
-#    Updated: 2024/01/10 15:52:43 by lseiberr         ###   ########.fr        #
+#    Updated: 2024/01/10 16:18:59 by lseiberr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= Serializer
+NAME	= base
 
 CC		= g++
 CFLAGS	= -Werror -Wextra -Wall -std=c++98 -Wshadow -Wno-shadow
 
-SRC		= src/main.cpp
+SRC		= src/main.cpp src/Base.cpp
 OBJ		= $(SRC:.cpp=.o)
 
 
