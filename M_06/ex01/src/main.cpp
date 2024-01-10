@@ -6,7 +6,7 @@
 /*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 10:52:00 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/10 15:31:06 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/10 15:48:58 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int main (void)
 {
-	uintptr_t test;
+	/*uintptr_t test;
 
 	Serializer serial;
 	Data newData;
@@ -29,5 +29,6 @@ int main (void)
 	std::cout << dataTest->getTest() << std::endl;
 	std::cout << &test << std::endl;
 	std::cout << &dataTest << std::endl;
-	(void)test;
+	(void)test;*/
+	std::cout << "Check the main, not instantiabl class yet\n";
 }

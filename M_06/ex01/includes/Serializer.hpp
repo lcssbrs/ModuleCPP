@@ -6,7 +6,7 @@
 /*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 13:34:15 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/10 15:16:16 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/10 15:47:53 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ class Data;
 class Serializer
 {
 	public:
-		Serializer();
-		Serializer(const Serializer & cpy);
-		Serializer & operator=(const Serializer & ope);
+
 		virtual ~Serializer();
 		uintptr_t serialize(Data* ptr);
 		Data* deserialize(uintptr_t raw);
 	private:
-
+		Serializer();
+		Serializer(const Serializer & cpy);
+		Serializer & operator=(const Serializer & ope);
 
 	protected:
 
