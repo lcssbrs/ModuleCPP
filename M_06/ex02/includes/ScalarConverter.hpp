@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 11:32:21 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/10 15:46:52 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/10 13:34:56 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,6 @@ class ScalarConverter
 		ScalarConverter(const ScalarConverter &cpy);
 	protected:
 };
+
 
 #endif
