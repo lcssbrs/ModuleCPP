@@ -3,19 +3,19 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+         #
+#    By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/06 16:37:12 by lseiberr          #+#    #+#              #
-#    Updated: 2024/01/10 20:19:52 by lseiberr         ###   ########.fr        #
+#    Updated: 2024/01/11 16:10:22 by lseiberr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= Conversion
+NAME	= functions
 
 CC		= g++
 CFLAGS	= -Werror -Wextra -Wall -std=c++98 -Wshadow -Wno-shadow
 
-SRC		= src/main.cpp
+SRC		= src/main.cpp src/whatever.cpp
 OBJ		= $(SRC:.cpp=.o)
 
 
