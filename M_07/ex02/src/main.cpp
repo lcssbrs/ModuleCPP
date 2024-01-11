@@ -1,11 +1,9 @@
-#include "Array.hpp"
+#include "../includes/Array.hpp"
 
 #define SIZE 10
 
 int main( void )
 {
-	std::cout << "-----------------------------------------------------" << std::endl;
-
 	Array< float > test;
 
 	Array< int > intArray( SIZE );
@@ -26,8 +24,5 @@ int main( void )
 	} catch ( Array< int >::OverflowIndex& e ) {
 		std::cout << "Error: " << e.what() << std::endl;
 	}
-
-	std::cout << "-----------------------------------------------------" << std::endl;
-
 	return ( 0 );
 }

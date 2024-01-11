@@ -6,7 +6,7 @@
 /*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 17:05:52 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/11 19:41:51 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/11 19:45:12 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ public:
 			this->_size = rhs.size();
 			this->_arr = new T[rhs.size()];
 			int i = 0;
-			while (i < this->_size) {
+			while ((unsigned int)i < this->_size) {
 				this->_arr[i] = rhs._arr[i];
 				i++;
 			}
