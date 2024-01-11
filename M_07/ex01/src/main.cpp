@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 09:57:02 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/11 16:34:24 by lseiberr         ###   ########.fr       */
+/*   Created: 2024/01/11 16:27:24 by lseiberr          #+#    #+#             */
+/*   Updated: 2024/01/11 16:57:55 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-#define WHATEVER_HPP
+#include "../includes/iter.hpp"
 
-#include <iostream>
-#include <algorithm>
-#include <vector>
-
-template <typename T>
-void swap(T a, T b)
+int main(int ac, char **ag)
 {
-	std::swap(a, b);
+	if (ac != 2)
+	{
+		std::cout << "Put an argument\n";
+		return -1;
+	}
+	iter(ag[1], strlen(ag[1]), funct);
+	std::cout << std::endl;
+	int test[] = {4, 3, 2, 1};
+	iter(test, 4, funct);
+	std::cout << std::endl;
+	return 0;
 }
-
-template <typename T>
-T max(T a, T b)
-{
-	return (std::max(a, b));
-}
-
-template <typename T>
-T min(T a, T b)
-{
-	return (std::min(a, b));
-}
-
-#endif

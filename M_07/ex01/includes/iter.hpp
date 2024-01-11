@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 09:57:02 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/11 16:34:24 by lseiberr         ###   ########.fr       */
+/*   Created: 2024/01/11 16:27:14 by lseiberr          #+#    #+#             */
+/*   Updated: 2024/01/11 16:57:36 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-#define WHATEVER_HPP
+#ifndef ITER_HPP
+#define ITER_HPP
 
 #include <iostream>
-#include <algorithm>
-#include <vector>
+#include <cstring>
 
 template <typename T>
-void swap(T a, T b)
+void funct(T element)
 {
-	std::swap(a, b);
+	std::cout << element;
 }
 
 template <typename T>
-T max(T a, T b)
+void iter(T *array, int len, void (*func)(T))
 {
-	return (std::max(a, b));
-}
-
-template <typename T>
-T min(T a, T b)
-{
-	return (std::min(a, b));
+	while (len > 0)
+	{
+		(*func)(*array);
+		array += 1;
+		len--;
+	}
 }
 
 #endif
