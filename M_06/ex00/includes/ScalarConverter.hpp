@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lseiberr <marvin@42perpignan.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 11:32:21 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/10 15:46:52 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/11 09:30:55 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ class ScalarConverter
 {
 	public:
 	//coplien
+		ScalarConverter();
+		ScalarConverter(const ScalarConverter &cpy);
 		ScalarConverter & operator=(const ScalarConverter & ope);
 		virtual ~ScalarConverter();
 
@@ -50,8 +52,7 @@ class ScalarConverter
 		static void	print_float(const char *str);
 
 	private:
-		ScalarConverter();
-		ScalarConverter(const ScalarConverter &cpy);
+
 	protected:
 };
 
