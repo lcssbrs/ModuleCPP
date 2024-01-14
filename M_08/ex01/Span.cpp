@@ -6,7 +6,7 @@
 /*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 13:24:55 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/13 17:00:36 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/14 15:12:04 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,8 @@ unsigned int	Span::longestSpan(void)
 	sort(this->keeper.begin(), this->keeper.end());
 	int itmin = this->keeper.front();
 	int itmax = this->keeper.back();
-	std::cout << itmin << std::endl;
-	std::cout << itmax << std::endl;
+	//std::cout << itmin << std::endl;
+	//std::cout << itmax << std::endl;
 	return itmax - itmin;
 }
 
