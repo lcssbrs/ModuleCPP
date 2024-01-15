@@ -6,11 +6,11 @@
 #    By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/06 16:37:12 by lseiberr          #+#    #+#              #
-#    Updated: 2024/01/12 16:20:41 by lseiberr         ###   ########.fr        #
+#    Updated: 2024/01/15 09:03:21 by lseiberr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= functions
+NAME	= btc
 
 CC		= g++
 CFLAGS	= -Werror -Wextra -Wall -std=c++98 -Wshadow -Wno-shadow
