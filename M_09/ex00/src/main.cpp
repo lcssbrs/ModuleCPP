@@ -6,7 +6,7 @@
 /*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 09:07:00 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/15 09:11:36 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/16 09:44:30 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,13 @@
 
 int	main(int ac, char **ag)
 {
-	if (ac != 2)
+	try
 	{
-		std::cerr << "Put an arg\n";
-		return (-1);
+		check_args(ac, ag);
 	}
+	catch(WrongArgsException& e)
+	{
+		std::cerr << e.what();
+	}
+	(void)ag;
 }

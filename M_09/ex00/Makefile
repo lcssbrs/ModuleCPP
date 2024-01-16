@@ -6,7 +6,7 @@
 #    By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/06 16:37:12 by lseiberr          #+#    #+#              #
-#    Updated: 2024/01/15 09:03:21 by lseiberr         ###   ########.fr        #
+#    Updated: 2024/01/16 09:19:50 by lseiberr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME	= btc
 CC		= g++
 CFLAGS	= -Werror -Wextra -Wall -std=c++98 -Wshadow -Wno-shadow
 
-SRC		= main.cpp
+SRC		= src/main.cpp src/BitcoinExchange.cpp
 OBJ		= $(SRC:.cpp=.o)
 
 
@@ -28,7 +28,7 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f *.o
+	rm -f src/*.o
 
 fclean: clean
 	rm -f $(NAME)
