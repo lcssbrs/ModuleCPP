@@ -2,3 +2,5 @@
 *.swp
 /.gitignore
 .*
+
+*.dSYM
