@@ -6,7 +6,7 @@
 /*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 09:07:00 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/16 10:24:10 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/16 16:25:30 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,10 @@ int	main(int ac, char **ag)
 	{
 		std::cerr << ex.what();
 	}
+	catch (ErrorLineException & exc)
+	{
+		std::cerr << exc.what();
+	}
 	(void)ag;
 }
+
