@@ -6,7 +6,7 @@
 /*   By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 09:01:53 by lseiberr          #+#    #+#             */
-/*   Updated: 2024/01/16 17:39:41 by lseiberr         ###   ########.fr       */
+/*   Updated: 2024/01/16 18:17:07 by lseiberr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int check_days_month(int days, int month)
 	{
 		if (days > 29)
 			return -1;
-	} 
+	}
 	return 0;
 }
 
@@ -122,19 +122,6 @@ int	check_value_is_digit(std::string value)
 	else if (is_digits(value) == false)
 		return -1;
 	return 0;
-		/*
-	if (value.find('.') != std::string::npos)
-	{
-		int intvalue = stoi(value);
-		if (intvalue < 0 || intvalue > 1000)
-			throw (ErrorLineException());
-	}
-	if (value.find('.') == std::string::npos)
-	{
-		float floatvalue = stof(value);
-		if (floatvalue < 0 || floatvalue > 1000)
-			throw (ErrorLineException());
-	}*/
 }
 
 map	add_data_to_map(map map_data, std::string line)
@@ -159,12 +146,12 @@ const char *ErrorLineException::what() const throw()
 	return "Error line can't be read\n";
 }
 
-map open_data(void)
+map open_data(std::string data)
 {
 	std::string line;
 	std::string input;
 	map map_data;
-	std::ifstream file("data.csv");
+	std::ifstream file(data);
 
 	if (!file.is_open())
 		throw (NotReadableDataException());
@@ -175,9 +162,6 @@ map open_data(void)
 			map_data = add_data_to_map(map_data, line);
 	}
 	file.close();
-	map::iterator itr;
-    for(itr=map_data.begin();itr!=map_data.end();itr++)
-        std::cout<<itr->first<<" "<<itr->second<<std::endl;
 	return map_data;
 }
 
