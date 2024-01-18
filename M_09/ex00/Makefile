@@ -5,34 +5,30 @@
 #                                                     +:+ +:+         +:+      #
 #    By: lseiberr <lseiberr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/06 16:37:12 by lseiberr          #+#    #+#              #
-#    Updated: 2024/01/16 16:25:19 by lseiberr         ###   ########.fr        #
+#    Created: 2024/01/18 09:40:05 by lseiberr          #+#    #+#              #
+#    Updated: 2024/01/18 09:40:05 by lseiberr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+
+SRCS	= main.cpp BitcoinExchange.cpp
+OBJS	= ${SRCS:.cpp=.o}
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
+RM		= rm -rf
 NAME	= btc
+CXX = c++
 
-CC		= g++
-CFLAGS	= -Werror -Wextra -Wall -std=c++98 -Wshadow -Wno-shadow
+all	: ${NAME}
 
-SRC		= src/main.cpp src/BitcoinExchange.cpp
-OBJ		= $(SRC:.cpp=.o)
+${NAME} :
+	${CXX} ${CXXFLAGS} ${SRCS} -o ${NAME}
 
+clean :
+	${RM} ${OBJS}
 
-all: $(NAME)
+fclean : clean
+	${RM} ${NAME}
 
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $@
+re : fclean all
 
-%.o: %.cpp
-	$(CC) $(CFLAGS) -c $< -o $@
-
-clean:
-	rm -f src/*.o
-
-fclean: clean
-	rm -f $(NAME)
-
-re: fclean all
-
-.PHONY: all re clean fclean
+a : all clean
